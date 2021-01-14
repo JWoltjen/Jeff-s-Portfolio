@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import sanityClient from '../client.js'; 
-import island from '../island.jpeg';
 import imageUrlBuilder from '@sanity/image-url'; 
 import BlockContent from '@sanity/block-content-to-react';
 import Background from './Background'
@@ -26,9 +25,9 @@ export default function About() {
     if (!author) return <div>Loading...</div>; 
     
     return (
-        <Background>
+        <>
+        <Background/>
         <main className='relative'>
-            <img src={island} alt='flower' className='absolute w-full'/> 
             <div className='p-10 lg:pt-48 container mx-auto relative'>
                 <section className='bg-green-800 rounded-lg shadow-2xl lg:flex p-20'>
                     <img src={urlFor(author.authorImage).url()} 
@@ -47,6 +46,6 @@ export default function About() {
                 </section>
             </div>
         </main> 
-        </Background>
+        </>
     );
 }
