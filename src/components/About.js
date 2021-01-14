@@ -3,6 +3,7 @@ import sanityClient from '../client.js';
 import island from '../island.jpeg';
 import imageUrlBuilder from '@sanity/image-url'; 
 import BlockContent from '@sanity/block-content-to-react';
+import Background from './Background'
 
 
 const builder = imageUrlBuilder(sanityClient); 
@@ -25,6 +26,7 @@ export default function About() {
     if (!author) return <div>Loading...</div>; 
     
     return (
+        <Background>
         <main className='relative'>
             <img src={island} alt='flower' className='absolute w-full'/> 
             <div className='p-10 lg:pt-48 container mx-auto relative'>
@@ -45,5 +47,6 @@ export default function About() {
                 </section>
             </div>
         </main> 
+        </Background>
     );
 }

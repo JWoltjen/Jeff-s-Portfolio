@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import sanityClient from '../client.js'
+import { Link } from 'react-router-dom';
+import sanityClient from '../client.js';
+import Background from './Background';
 
 export default function Post() {
     const [postData, setPost] = useState(null); 
@@ -23,6 +24,7 @@ export default function Post() {
     }, []);
 
     return (
+        <Background>
         <main className='bg-green-100 min-h-screen p-12'>
             <section className='container mx-auto'>
                 <h1 className='text-5xl flex justify-center cursive'>Blog Posts Page</h1>
@@ -52,5 +54,6 @@ export default function Post() {
                 </div>
             </section>
         </main>
+        </Background>
     ) 
 }

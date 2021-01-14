@@ -8,7 +8,7 @@ function Background() {
             loop
             muted
             className=
-                'bg-fixed absolute'>
+                'bg-fixed absolute w-screen h-screen z-0 object-cover'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
     )
