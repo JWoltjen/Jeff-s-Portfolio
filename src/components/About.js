@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import sanityClient from '../client.js'; 
-import island from '../island.jpeg';
 import imageUrlBuilder from '@sanity/image-url'; 
 import BlockContent from '@sanity/block-content-to-react';
+import Background from './Background'
 
 
 const builder = imageUrlBuilder(sanityClient); 
@@ -25,25 +25,27 @@ export default function About() {
     if (!author) return <div>Loading...</div>; 
     
     return (
+        <>
+        <Background/>
         <main className='relative'>
-            <img src={island} alt='flower' className='absolute w-full'/> 
             <div className='p-10 lg:pt-48 container mx-auto relative'>
-                <section className='bg-green-800 rounded-lg shadow-2xl lg:flex p-20'>
+                <section className='bg-green-200 rounded-lg shadow-2xl lg:flex p-10'>
                     <img src={urlFor(author.authorImage).url()} 
                          className='rounded w-32 h-32 lg:w-64 lg:h-64 mr-8' 
                          alt={author.name}
                     />
                     <div className="text-lg flex flex-col justify-center">
-                        <h1 className='cursive text=6xl text-green-300 mb-4'>
+                        <h1 className='cursive text-6xl text-green-300 mb-4'>
                             Hey there. I'm {" "}
-                            <span className='text-green-100'>{author.name}</span>
+                            <span className='text-cursive'>{author.name}</span>
                         </h1>
-                        <div className='prose lg:prose-xl text-white'>
+                        <div className='prose lg:prose-xl text-white cursive'>
                             <BlockContent blocks={author.bio} projectId='8rgqlktn' dataset='production'/>
                         </div>
                     </div>
                 </section>
             </div>
         </main> 
+        </>
     );
 }
