@@ -25,8 +25,8 @@ export default function Post() {
     return (
         <main className='relative p-12 z-10'>
             <section className='container mx-auto'>
-                <h1 className='text-5xl flex justify-center cursive z-10'>Blog Posts Page</h1>
-                <h2 className='text-lg text-gray-600 flex justify-center mb-12'>Welcome to my Unassorted Thoughts</h2>
+                <h1 className='text-5xl flex justify-center text-white cursive z-10'>Blog Posts Page</h1>
+                <h2 className='text-lg text-white flex justify-center mb-12 cursive'>Welcome to my Unassorted Thoughts</h2>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {postData && postData.map((post, index) => (
                    <article>
@@ -41,7 +41,7 @@ export default function Post() {
                                 className='w-full h-full rounded-r object-cover absolute'
                             />
                              <span className='block relative h-full flex justify-end items-end pr-4 pb-4'>
-                                 <h3 className='text-gray-800 text-lg font-bold px-3 py-4 bg-red-700 text-red-100 bg-opacity-75 rounded'>
+                                 <h3 className='text-gray-800 text-lg font-bold cursive px-3 py-4 bg-red-700 text-red-100 bg-opacity-75 rounded'>
                                      {post.title}
                                  </h3>
                              </span>
