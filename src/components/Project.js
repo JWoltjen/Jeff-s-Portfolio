@@ -17,13 +17,11 @@ export default function Project() {
     }, []);
 
     return (
-        <main className='bg-green-100 min-h-0 p-2'>
+        <main className='p-2'>
             <section className="container mx-auto">
                 <section className='grid grid-cols-2 gap-8'>
                     {projectData && projectData.map((project, index) =>(
-
-   
-                    <article className='relative rounded-lg shadow-xl bg-white p-2 opacity-80'>
+                    <article className='relative rounded-md shadow-xl bg-white p-2 opacity-80'>
                         <h3 className='text-gray-800 text-xl font-bold mb-2 hover:text-red-700'> 
                         <a
                             href={project.link}
