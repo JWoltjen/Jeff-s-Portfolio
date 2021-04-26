@@ -5,12 +5,10 @@ import SinglePost from './components/SinglePost';
 import Post from './components/Post'; 
 import Project from './components/Project';  
 import NavBar from './components/NavBar'
-import Background from './components/Background'
 function App() {
   return (
     <BrowserRouter>
       <NavBar/>
-      <Background/>
         <Switch>
           <Route component={Home} path='/' exact/>
           <Route component={About} path='/About'/>

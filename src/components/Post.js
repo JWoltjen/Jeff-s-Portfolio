@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import sanityClient from '../client.js';
+import BackgroundVideo from '../island.mp4'
 
 export default function Post() {
     const [postData, setPost] = useState(null); 
@@ -23,10 +24,19 @@ export default function Post() {
     }, []);
 
     return (
+        <>
+        <video 
+            autoPlay
+            loop
+            muted
+            className=
+                'z-0 bg-fixed absolute w-screen h-screen object-fill'>
+            <source src={BackgroundVideo} type="video/mp4"/>
+        </video>
         <main className='relative p-12 z-10'>
             <section className='container mx-auto'>
-                <h1 className='text-5xl flex justify-center text-white cursive z-10'>Blog Posts Page</h1>
-                <h2 className='text-lg text-white flex justify-center mb-12 cursive'>Welcome to my Unassorted Thoughts</h2>
+                <h1 className='text-6xl flex justify-center text-white cursive z-10'>A journey in front-end engineering</h1>
+                <h2 className='text-lg text-white flex justify-center mb-12 cursive'></h2>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {postData && postData.map((post, index) => (
                    <article>
@@ -52,5 +62,6 @@ export default function Post() {
                 </div>
             </section>
         </main>
+        </>
     ) 
 }

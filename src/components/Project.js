@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import sanityClient from '../client.js'
-
+import BackgroundVideo from '../island.mp4'
 export default function Project() {
     const [projectData, setProjectData] = useState(null)
 
@@ -17,6 +17,15 @@ export default function Project() {
     }, []);
 
     return (
+        <>
+        <video 
+            autoPlay
+            loop
+            muted
+            className=
+                'z-0 bg-fixed absolute w-screen h-screen object-fill'>
+            <source src={BackgroundVideo} type="video/mp4"/>
+        </video>
         <main className='p-2'>
             <section className="container mx-auto">
                 <section className='grid grid-cols-2 gap-8'>
@@ -63,5 +72,6 @@ export default function Project() {
                 </section>
             </section>
         </main>
+        </>
     )
 }
