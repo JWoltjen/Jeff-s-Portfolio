@@ -27,10 +27,11 @@ export default function Post() {
         <>
         <video 
             autoPlay
+            poster="stillBG.jpeg"
             loop
             muted
             className=
-                'z-0 bg-fixed absolute w-screen h-screen object-fill'>
+                'videoBG'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
         <main className='relative p-12 z-10'>
@@ -48,7 +49,7 @@ export default function Post() {
                             <img 
                                 src={post.mainImage.asset.url}
                                 alt={post.mainImage.alt}
-                                className='w-full h-full rounded-r object-cover absolute'
+                                className='w-full h-full rounded-r object-scale-down absolute'
                             />
                              <span className='block relative h-full flex justify-end items-end pr-4 pb-4'>
                                  <h3 className='text-gray-800 text-lg font-bold cursive px-3 py-4 bg-red-700 text-red-100 bg-opacity-75 rounded'>

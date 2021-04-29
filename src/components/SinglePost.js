@@ -38,10 +38,11 @@ export default function SinglePost() {
         <>
            <video 
             autoPlay
+            poster="stillBG.jpeg"
             loop
             muted
             className=
-                'absolute top-22 left-0 w-screen h-screen object-cover opacity-30'>
+                'videoBG'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
         {/* <div className='overlay absolute top-8 left-0 w-full h-full bg-overlay'></div> */}

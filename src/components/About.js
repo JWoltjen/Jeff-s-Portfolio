@@ -28,10 +28,11 @@ export default function About() {
         <>
         <video 
             autoPlay
+            poster="stillBG.jpeg"
             loop
             muted
             className=
-                'z-0 bg-fixed absolute w-screen h-screen object-fill'>
+                'videoBG'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
         <main className='relative'>
