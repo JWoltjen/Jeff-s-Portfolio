@@ -36,7 +36,7 @@ export default function Post() {
         </video>
         <main className='relative p-12 z-10'>
             <section className='container mx-auto'>
-                <h1 className='text-6xl flex justify-center text-white cursive z-10'>A journey in front-end engineering</h1>
+                <h1 className='lg:text-9xl md:text-7xl sm:text-5xl text-3xl mb-14 flex justify-center text-white cursive z-10'>A journey in front-end engineering</h1>
                 <h2 className='text-lg text-white flex justify-center mb-12 cursive'></h2>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {postData && postData.map((post, index) => (
