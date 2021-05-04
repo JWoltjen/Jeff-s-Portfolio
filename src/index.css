@@ -13,6 +13,20 @@
   border-radius: 5px;
 }
 
-.home-name {
-  font-size: 150px;
+.videoBG {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .videoBG {
+    display: none;
+  }
+
+  main {
+    background: url("stillBG.jpeg");
+    background-size: cover;
+  }
 }

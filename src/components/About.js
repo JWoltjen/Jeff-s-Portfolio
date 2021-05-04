@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import sanityClient from '../client.js'; 
 import imageUrlBuilder from '@sanity/image-url'; 
 import BlockContent from '@sanity/block-content-to-react';
-
+import BackgroundVideo from '../island.mp4'
 
 
 const builder = imageUrlBuilder(sanityClient); 
@@ -26,6 +26,15 @@ export default function About() {
     
     return (
         <>
+        <video 
+            autoPlay
+            poster="stillBG.jpeg"
+            loop
+            muted
+            className=
+                'videoBG'>
+            <source src={BackgroundVideo} type="video/mp4"/>
+        </video>
         <main className='relative'>
             <div className='p-10 lg:pt-48 container mx-auto relative'>
                 <section className='bg-white-200 rounded-lg shadow-2xl lg:flex p-2'>
