@@ -25,18 +25,17 @@ export default function About() {
     if (!author) return <div>Loading...</div>; 
     
     return (
-        <>
+    <div className='full-screen-video-container'>
         <video 
             autoPlay
             poster="stillBG.jpeg"
             loop
             muted
-            className=
-                'videoBG'>
+            className='full-screen-video-container video'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
-        <main className='relative'>
-            <div className='p-10 lg:pt-48 container mx-auto relative'>
+         <div className='full-screen-video-content'>
+            <div className='p-10 lg:pt-48 container mx-0 relative'>
                 <section className='bg-white-200 rounded-lg shadow-2xl lg:flex p-2'>
                     <img src={urlFor(author.authorImage).url()} 
                          className='rounded w-32 h-32 lg:w-64 lg:h-64 mr-8' 
@@ -47,13 +46,13 @@ export default function About() {
                             Hey there. I'm {" "}
                             <span className='text-cursive'>{author.name}</span>
                         </h1>
-                        <div className='prose lg:prose-xl text-white cursive'>
+                        <div className='prose lg:prose-xl text-red-600 cursive'>
                             <BlockContent blocks={author.bio} projectId='8rgqlktn' dataset='production'/>
                         </div>
                     </div>
                 </section>
             </div>
-        </main> 
-        </>
+        </div> 
+        </div>
     );
 }

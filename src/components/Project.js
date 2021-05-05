@@ -17,18 +17,16 @@ export default function Project() {
     }, []);
 
     return (
-        <>
+    <div className='full-screen-video-container'>
         <video 
             autoPlay
             poster="stillBG.jpeg"
             loop
             muted
-            className=
-                'videoBG'>
+            className='full-screen-video-container video'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
-        <main className='p-2 bg-local'>
-            <section className="container mx-auto">
+         <div className='full-screen-video-content'>
                 <section className='grid grid-cols-2 gap-8'>
                     {projectData && projectData.map((project, index) =>(
                     <article className='relative rounded-md shadow-xl bg-white p-2 opacity-80'>
@@ -71,8 +69,7 @@ export default function Project() {
                     </article>
                     ))}
                 </section>
-            </section>
-        </main>
-        </>
+             </div>
+        </div>
     )
 }

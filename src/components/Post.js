@@ -24,26 +24,23 @@ export default function Post() {
     }, []);
 
     return (
-        <>
+        <div className='full-screen-video-container'>
         <video 
             autoPlay
             poster="stillBG.jpeg"
             loop
             muted
-            className=
-                'videoBG'>
+            className='full-screen-video-container video'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
-        <main className='relative p-12 z-10'>
-            <section className='container mx-auto'>
-                <h1 className='lg:text-9xl md:text-7xl sm:text-5xl text-3xl mb-14 flex justify-center text-white cursive z-10'>A journey in front-end engineering</h1>
-                <h2 className='text-lg text-white flex justify-center mb-12 cursive'></h2>
-                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+         <div className='full-screen-video-content'>
+                {/* <h1 className='text-white cursive z-10'>A journey in front-end engineering</h1> */}
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 z-10'>
                     {postData && postData.map((post, index) => (
                    <article>
                        <Link to={'/post/' + post.slug.current} key={post.slug.current}>
                             <span 
-                                className='block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-green-400'
+                                className='block h-32 relative rounded shadow leading-snug border-l-8 border-green-400 z-10'
                                 key={index}
                             >
                             <img 
@@ -61,8 +58,7 @@ export default function Post() {
                      </article> 
                     ))}
                 </div>
-            </section>
-        </main>
-        </>
+            </div>
+        </div>
     ) 
 }
