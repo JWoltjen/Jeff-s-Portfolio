@@ -2,6 +2,25 @@
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 
+* {
+  margin: none;
+  padding: none;
+}
+.div {
+  margin: none;
+  padding: none;
+}
+.html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
 .cursive {
   font-family: "Shadows Into Light", cursive;
   font-weight: 700;
@@ -17,23 +36,29 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
 }
-.videoBG {
+
+.full-screen-video-container video {
   position: absolute;
   z-index: -1;
   width: auto;
   height: auto;
   min-width: 100%;
   min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
 }
 
-@media (max-width: 767px) {
-  .videoBG {
-    display: none;
-  }
-
-  main {
-    background: url("stillBG.jpeg");
-    background-size: cover;
-  }
+main {
+  background: url("stillBG.jpeg");
+  background-size: cover;
 }

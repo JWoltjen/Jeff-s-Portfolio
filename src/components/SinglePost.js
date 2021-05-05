@@ -46,7 +46,7 @@ export default function SinglePost() {
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
         <main className="text z-40 relative min-h-screen p-12">
-            <article className='container shadow-lg mx-auto bg-white rounded-lg'>
+            <article className='container shadow-lg mx-0 rounded-lg'>
                 <header className='flex flex-row relative'>
                     <div className='absolute h-full w-full flex items-center justify-center p-8'>
                         <div className='bg-white bg-opacity-30 rounded p-12'>
