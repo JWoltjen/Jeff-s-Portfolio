@@ -34,7 +34,8 @@ export default function Post() {
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
          <div className='full-screen-video-content'>
-                {/* <h1 className='text-white cursive z-10'>A journey in front-end engineering</h1> */}
+            <section className='content-center text-center px-10 flex-1'>
+                <h1 className='text-white cursive py-10 text-6xl z-10'>A journey in front-end engineering</h1>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 z-10'>
                     {postData && postData.map((post, index) => (
                    <article>
@@ -58,6 +59,7 @@ export default function Post() {
                      </article> 
                     ))}
                 </div>
+                </section>
             </div>
         </div>
     ) 

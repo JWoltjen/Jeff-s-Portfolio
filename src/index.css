@@ -2,25 +2,6 @@
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 
-* {
-  margin: none;
-  padding: none;
-}
-.div {
-  margin: none;
-  padding: none;
-}
-.html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
-}
-
 .cursive {
   font-family: "Shadows Into Light", cursive;
   font-weight: 700;
