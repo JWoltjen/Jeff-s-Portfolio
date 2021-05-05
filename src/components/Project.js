@@ -27,7 +27,7 @@ export default function Project() {
                 'videoBG'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
-        <main className='p-2'>
+        <main className='p-2 bg-local'>
             <section className="container mx-auto">
                 <section className='grid grid-cols-2 gap-8'>
                     {projectData && projectData.map((project, index) =>(

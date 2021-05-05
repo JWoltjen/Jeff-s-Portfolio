@@ -12,12 +12,19 @@
   margin-right: auto;
   border-radius: 5px;
 }
-
+.full-screen-video-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
 .videoBG {
   position: absolute;
   z-index: -1;
-  width: 100%;
+  width: auto;
   height: auto;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 @media (max-width: 767px) {
