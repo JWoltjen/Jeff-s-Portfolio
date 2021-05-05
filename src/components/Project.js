@@ -20,14 +20,13 @@ export default function Project() {
     <div className='full-screen-video-container'>
         <video 
             autoPlay
-            poster="stillBG.jpeg"
             loop
             muted
             className='full-screen-video-container video'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
-         <div className='full-screen-video-content'>
-                <section className='grid grid-cols-2 gap-8'>
+         <div className='full-screen-video-content py-10'>
+                <section className='content-center px-10 grid grid-cols-2 gap-8 grid-gap-3'>
                     {projectData && projectData.map((project, index) =>(
                     <article className='relative rounded-md shadow-xl bg-white p-2 opacity-80'>
                         <h3 className='text-gray-800 text-xl font-bold mb-2 hover:text-red-700'> 
@@ -50,7 +49,7 @@ export default function Project() {
                                 <strong className="font-bold">Place</strong>:{' '}
                                 {project.place}
                             </span>
-                            <p className='my-6 text-sm text-gray-700 leading-relaxed'>
+                            <p className='truncate my-6 text-sm text-gray-700 leading-relaxed'>
                                  {project.description}
                             </p>
                             <a 
@@ -70,6 +69,6 @@ export default function Project() {
                     ))}
                 </section>
              </div>
-        </div>
+    </div>
     )
 }

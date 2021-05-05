@@ -35,18 +35,17 @@ export default function SinglePost() {
     if (!singlePost) return <div>Loading...</div>
 
     return (
-        <>
-           <video 
+        <div className='full-screen-video-container'>
+        <video 
             autoPlay
             poster="stillBG.jpeg"
             loop
             muted
-            className=
-                'videoBG'>
+            className='full-screen-video-container video'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
-        <main className="text z-40 relative min-h-screen p-12">
-            <article className='container shadow-lg mx-0 rounded-lg'>
+         <div className='full-screen-video-content py-10'>
+            <article className='container shadow-lg mx-auto bg-white rounded-lg'>
                 <header className='flex flex-row relative'>
                     <div className='absolute h-full w-full flex items-center justify-center p-8'>
                         <div className='bg-white bg-opacity-30 rounded p-12'>
@@ -74,12 +73,14 @@ export default function SinglePost() {
                             />
                         </div>
                     </header>
-                        <div className='overflow-auto font-extrabold text-opacity-100 px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full'>
+                    <div className='overflow-auto'>
+                        <div className='font-extrabold text-opacity-100 px-8 lg:px-32 py-4 lg:py-8 prose lg:prose-xl max-w-full'>
                             <BlockContent blocks={singlePost.body} projectId='8rgqlktn' dataset='production'/> 
                         </div>
+                    </div>
                     
             </article>
-        </main>
-        </>
+        </div>
+        </div>
     )
 }
