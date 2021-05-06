@@ -3,7 +3,7 @@ import sanityClient from '../client.js';
 import imageUrlBuilder from '@sanity/image-url'; 
 import BlockContent from '@sanity/block-content-to-react';
 import BackgroundVideo from '../island.mp4'
-
+import {Carousel} from '3d-react-carousal'
 
 const builder = imageUrlBuilder(sanityClient); 
 function urlFor(source){
@@ -11,6 +11,14 @@ function urlFor(source){
 }
 
 export default function About() {
+
+    let slides = [
+    <img  src="https://picsum.photos/800/300/?random" alt="1" />,
+    <img  src="https://picsum.photos/800/301/?random" alt="2" />  ,
+    <img  src="https://picsum.photos/800/302/?random" alt="3" />  ,
+    <img  src="https://picsum.photos/800/303/?random" alt="4" />  ,
+    <img src="https://picsum.photos/800/304/?random" alt="5" /> 
+    ]
     const [author, setAuthor] = useState(null); 
 
     useEffect(() =>{
@@ -52,6 +60,7 @@ export default function About() {
                     </div>
                 </section>
             </div>
+            <Carousel slides={slides} autoplay={true} interval={1000}/>
         </div> 
         </div>
     );
