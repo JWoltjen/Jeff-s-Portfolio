@@ -23,7 +23,7 @@ export default function About() {
     <img src="https://i.imgur.com/cyPT2et.jpg"  alt="8" /> , 
     <img src="https://i.imgur.com/li8NI9r.jpg"  alt="9" /> ,
     <img src="https://i.imgur.com/vmF34qA.jpg"  alt="10" /> ,
-    <img src="https://i.imgur.com/zJevqtb.jpg"  alt="11" /> ,
+    <img src="https://i.imgur.com/zJevqtb.jpg?1" alt="pirate" /> ,
     <img src="https://i.imgur.com/BHJOdnE.jpg"  alt="12" /> ,
     <img src="https://i.imgur.com/UgSP23m.jpg"  alt="13" /> ,
     <img src="https://i.imgur.com/I498eUJ.jpg" alt="14" />, 
@@ -55,7 +55,7 @@ export default function About() {
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
          <div className='full-screen-video-content'>
-            <div className='p-5 lg:pt-48 container mx-auto relative'>
+            <div className='p-5 lg:pt-24 container mx-auto relative'>
                 <section className='bg-white-200 rounded-lg shadow-2xl lg:flex p-2'>
                     <img src={urlFor(author.authorImage).url()} 
                          className='rounded w-32 h-32 lg:w-64 lg:h-64 mr-8' 
