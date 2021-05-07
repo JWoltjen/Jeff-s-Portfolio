@@ -49,9 +49,11 @@ export default function Project() {
                                 <strong className="font-bold">Place</strong>:{' '}
                                 {project.place}
                             </span>
-                            <p className='truncate my-6 text-sm text-gray-700 leading-relaxed'>
-                                 {project.description}
-                            </p>
+                            <div className='container mx-auto'>
+                                <p className='h-2 md: h-5 lg: h-7 overflow-scroll my-6 text-sm text-gray-700 leading-relaxed'>
+                                    {project.description}
+                                </p>
+                            </div>
                             <a 
                                 href={project.link}
                                 rel='noopener noreferrer' 
