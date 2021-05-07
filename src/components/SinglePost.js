@@ -36,51 +36,43 @@ export default function SinglePost() {
 
     return (
         <div className='full-screen-video-container'>
-        <video 
-            autoPlay
-            poster="stillBG.jpeg"
-            loop
-            muted
-            className='full-screen-video-container video'>
-            <source src={BackgroundVideo} type="video/mp4"/>
-        </video>
-         <div className='full-screen-video-content py-10'>
-            <article className='container shadow-lg mx-auto bg-white rounded-lg'>
-                <header className='flex flex-row relative'>
-                    <div className='absolute h-full w-full flex items-center justify-center p-8'>
-                        <div className='bg-white bg-opacity-30 rounded p-12'>
-                            <h1 className='font-extrabold cursive text-3xl lg:text-6xl mb-4'>{singlePost.title}
-                            </h1>
-                            <span>
-                            <div className='flex justify-center text-gray-800'>
-                                <img src={urlFor(singlePost.authorImage).url()} 
-                                alt={singlePost.name}
-                                className='w-20 h-20 rounded-full'
-                                />
-                                 <p className='cursive flex items-center pl-2 text-2xl'>
-                                     {singlePost.name}
-                                 </p>
-                                </div>
-                            </span>
+            <video 
+                autoPlay
+                poster="stillBG.jpeg"
+                loop
+                muted
+                className='full-screen-video-container video'>
+                <source src={BackgroundVideo} type="video/mp4"/>
+            </video>
+         <div className='full-screen-video-content sm: py-10 md: py-12 lg: py-12'>
+            <article className='container mx-auto bg-white rounded-lg'>
+                    <div className='absolute'>
+                        <div className='rounded p-12 flex items-center opacity-80'>
+                            <h1 className='font-extrabold cursive sm: text-3xl md: text-4xl lg:text-6xl mb-4'>{singlePost.title}</h1> 
+                                    {/* <div className='text-gray-800'>
+                                        <img src={urlFor(singlePost.authorImage).url()} 
+                                        alt={singlePost.name}
+                                        className='h-20 w-20 rounded-full'
+                                        />
+                                    <p className='justify-center cursive text-2xl'>
+                                        {singlePost.name}
+                                    </p>
+                                    </div> */}
                         </div>
-                    </div>
-                        <div className='justify-center'>
+                     </div>
+                        <div className='container flex justify-center items center'>
                             <img 
                                 src={singlePost.mainImage.asset.url}
                                 alt={singlePost.title} 
-                                className='w-full object-cover rounded-t'
-                                style={{ height: '20rem' }}
+                                className='items-center rounded-t opacity-10'
+                                style={{ height: '10rem' }}
                             />
                         </div>
-                    </header>
-                    <div className='overflow-auto'>
-                        <div className='font-extrabold text-opacity-100 px-8 lg:px-32 py-4 lg:py-8 prose lg:prose-xl max-w-full'>
+                        <div className='h-auto font-extrabold px-4 pb-4 mx-auto prose lg:prose-xl max-w-full'>
                             <BlockContent blocks={singlePost.body} projectId='8rgqlktn' dataset='production'/> 
                         </div>
-                    </div>
-                    
-            </article>
-        </div>
+                </article>
+            </div>
         </div>
     )
 }
