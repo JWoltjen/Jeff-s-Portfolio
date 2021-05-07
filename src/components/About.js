@@ -73,7 +73,7 @@ export default function About() {
                 </section>
             </div>
             <div className='p-5 container mx-auto relative'> 
-                <Carousel className=''slides={slides} autoplay={true} interval={10000}/>
+                <Carousel className=''slides={slides} autoplay={true} interval={5000}/>
             </div>
         </div> 
         </div>
