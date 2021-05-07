@@ -47,19 +47,17 @@ export default function SinglePost() {
          <div className='full-screen-video-content sm: py-10'>
             <article className='container mx-auto bg-white rounded-lg'>
                     <div className='absolute flex items-center justify-center'>
-                        <div className='bg-white bg-opacity-30 rounded p-12'>
-                            <h1 className='font-extrabold cursive text-3xl lg:text-6xl mb-4'>{singlePost.title}</h1>
-                            <span>
+                        <div className='rounded p-12'>
+                            <h1 className='font-extrabold cursive text-3xl lg:text-6xl mb-4'>{singlePost.title}</h1> 
                             <div className='flex justify-center text-gray-800'>
                                 <img src={urlFor(singlePost.authorImage).url()} 
                                 alt={singlePost.name}
                                 className='h-20 w-20 rounded-full'
                                 />
-                                 <p className='cursive px-2 text-2xl'>
+                                 <p className='cursive text-2xl'>
                                      {singlePost.name}
                                  </p>
                                 </div>
-                            </span>
                         </div>
                      </div>
                         <div className='container mx-auto flex justify-center items center'>
