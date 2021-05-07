@@ -25,10 +25,11 @@ export default function Project() {
             className='full-screen-video-container video'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
-         <div className='full-screen-video-content py-10'>
-                <section className='content-center px-10 grid grid-cols-2 gap-8 grid-gap-3'>
+         <div className='full-screen-video-content py-8'>
+             <div className='overflow-auto'>
+                <section className='content-center px-2 grid grid-cols-2 gap-8 grid-gap-3'>
                     {projectData && projectData.map((project, index) =>(
-                    <article className='relative rounded-md shadow-xl bg-white p-2 opacity-80'>
+                    <article className='relative rounded-md bg-white p-4 opacity-80'>
                         <h3 className='text-gray-800 text-xl font-bold mb-2 hover:text-red-700'> 
                         <a
                             href={project.link}
@@ -40,7 +41,7 @@ export default function Project() {
                         </a>  
                         </h3>
 
-                        <div className='text-gray-500 text-xs space-x-4'>
+                        <div className='text-gray-500 space-x-4'>
                             <span>
                                 <strong className='font-bold'>Finished on</strong>:{' '}
                                 {new Date(project.date).toLocaleDateString()}
@@ -49,9 +50,11 @@ export default function Project() {
                                 <strong className="font-bold">Place</strong>:{' '}
                                 {project.place}
                             </span>
-                            <p className='truncate my-6 text-sm text-gray-700 leading-relaxed'>
-                                 {project.description}
-                            </p>
+                            <div className='container mx-auto max-w-lg sm: h-5 md: h-10 lg: h-20 overflow-scroll'>
+                                <p className='my-6 text-sm text-gray-700 leading-snug'>
+                                    {project.description}
+                                </p>
+                            </div>
                             <a 
                                 href={project.link}
                                 rel='noopener noreferrer' 
@@ -68,7 +71,8 @@ export default function Project() {
                     </article>
                     ))}
                 </section>
-             </div>
+            </div>
+        </div>
     </div>
     )
 }
