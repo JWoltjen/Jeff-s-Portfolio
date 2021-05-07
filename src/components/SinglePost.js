@@ -36,18 +36,18 @@ export default function SinglePost() {
 
     return (
         <div className='full-screen-video-container'>
-        <video 
-            autoPlay
-            poster="stillBG.jpeg"
-            loop
-            muted
-            className='full-screen-video-container video'>
-            <source src={BackgroundVideo} type="video/mp4"/>
-        </video>
-         <div className='full-screen-video-content py-10'>
-            <article className='container shadow-lg mx-auto bg-white rounded-lg'>
+            <video 
+                autoPlay
+                poster="stillBG.jpeg"
+                loop
+                muted
+                className='full-screen-video-container video'>
+                <source src={BackgroundVideo} type="video/mp4"/>
+            </video>
+         <div className='full-screen-video-content py-8'>
+            <article className='container mx-auto bg-white rounded-lg'>
                 <header className='flex flex-row relative'>
-                    <div className='absolute h-full w-full flex items-center justify-center p-8'>
+                    <div className='absolute flex items-center justify-center'>
                         <div className='bg-white bg-opacity-30 rounded p-12'>
                             <h1 className='font-extrabold cursive text-3xl lg:text-6xl mb-4'>{singlePost.title}
                             </h1>
@@ -63,24 +63,21 @@ export default function SinglePost() {
                                 </div>
                             </span>
                         </div>
-                    </div>
+                     </div>
                         <div className='justify-center'>
                             <img 
                                 src={singlePost.mainImage.asset.url}
                                 alt={singlePost.title} 
-                                className='w-full object-cover rounded-t'
+                                className='items-center rounded-t'
                                 style={{ height: '20rem' }}
                             />
                         </div>
                     </header>
-                    <div className='overflow-auto'>
-                        <div className='font-extrabold text-opacity-100 px-8 lg:px-32 py-4 lg:py-8 prose lg:prose-xl max-w-full'>
+                        <div className='h-auto font-extrabold px-4 pb-4 mx-auto prose lg:prose-xl max-w-full'>
                             <BlockContent blocks={singlePost.body} projectId='8rgqlktn' dataset='production'/> 
                         </div>
-                    </div>
-                    
-            </article>
-        </div>
+                </article>
+            </div>
         </div>
     )
 }

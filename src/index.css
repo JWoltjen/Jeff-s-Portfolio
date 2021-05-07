@@ -6,6 +6,10 @@
   font-family: "Shadows Into Light", cursive;
   font-weight: 700;
 }
+p {
+  margin: auto;
+  padding: auto;
+}
 
 .prose img {
   margin-left: auto;
