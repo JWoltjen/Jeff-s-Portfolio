@@ -44,12 +44,12 @@ export default function SinglePost() {
                 className='full-screen-video-container video'>
                 <source src={BackgroundVideo} type="video/mp4"/>
             </video>
-         <div className='full-screen-video-content sm: py-10 md: py-12 lg: py-16'>
+         <div className='full-screen-video-content sm: py-10 md: py-12 lg: py-12'>
             <article className='container mx-auto bg-white rounded-lg'>
                     <div className='absolute'>
                         <div className='rounded p-12 flex items-center opacity-80'>
-                            <h1 className='font-extrabold cursive text-3xl lg:text-6xl mb-4'>{singlePost.title}</h1> 
-                                    <div className='text-gray-800'>
+                            <h1 className='font-extrabold cursive sm: text-3xl md: text-4xl lg:text-6xl mb-4'>{singlePost.title}</h1> 
+                                    {/* <div className='text-gray-800'>
                                         <img src={urlFor(singlePost.authorImage).url()} 
                                         alt={singlePost.name}
                                         className='h-20 w-20 rounded-full'
@@ -57,14 +57,14 @@ export default function SinglePost() {
                                     <p className='justify-center cursive text-2xl'>
                                         {singlePost.name}
                                     </p>
-                                    </div>
+                                    </div> */}
                         </div>
                      </div>
                         <div className='container flex justify-center items center'>
                             <img 
                                 src={singlePost.mainImage.asset.url}
                                 alt={singlePost.title} 
-                                className='items-center rounded-t'
+                                className='items-center rounded-t opacity-10'
                                 style={{ height: '10rem' }}
                             />
                         </div>
