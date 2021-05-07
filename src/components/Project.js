@@ -50,8 +50,8 @@ export default function Project() {
                                 <strong className="font-bold">Place</strong>:{' '}
                                 {project.place}
                             </span>
-                            <div className='container mx-auto max-w-md h-5 overflow-auto'>
-                                <p className='my-6 text-sm text-gray-700 leading-relaxed'>
+                            <div className='container mx-auto max-w-lg sm: h-5 md: h-10 lg: h-20 overflow-scroll'>
+                                <p className='my-6 text-sm text-gray-700 leading-snug'>
                                     {project.description}
                                 </p>
                             </div>
