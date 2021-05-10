@@ -51,7 +51,7 @@ export default function About() {
             poster="stillBG.jpeg"
             loop
             muted
-            className='full-screen-video-container video'>
+            className='video'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
          <div className='full-screen-video-content'>
@@ -72,7 +72,7 @@ export default function About() {
                     </div>
                 </section>
             </div>
-            <div className='p-5 container mx-auto'> 
+            <div className='p-5 container mx-auto md: max-h-6'> 
                 <Carousel className='' slides={slides} autoplay={true} interval={5000}/>
             </div>
         </div> 

@@ -22,7 +22,7 @@ export default function Project() {
             autoPlay
             loop
             muted
-            className='full-screen-video-container video'>
+            className='video'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
          <div className='full-screen-video-content py-8'>
