@@ -22,11 +22,11 @@ export default function Project() {
             autoPlay
             loop
             muted
-            className='full-screen-video-container video'>
+            className='video'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
          <div className='full-screen-video-content py-8'>
-             <div className='overflow-auto'>
+             <div className='container max-h-96 overflow-auto'>
                 <section className='content-center px-2 grid grid-cols-2 gap-8 grid-gap-3'>
                     {projectData && projectData.map((project, index) =>(
                     <article className='relative rounded-md bg-white p-4 opacity-80'>

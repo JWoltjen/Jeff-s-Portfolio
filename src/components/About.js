@@ -51,29 +51,31 @@ export default function About() {
             poster="stillBG.jpeg"
             loop
             muted
-            className='full-screen-video-container video'>
+            className='video'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
          <div className='full-screen-video-content'>
-            <div className='p-5 lg:pt-24 container mx-auto relative'>
-                <section className='bg-white-200 rounded-lg shadow-2xl lg:flex p-2'>
-                    <img src={urlFor(author.authorImage).url()} 
-                         className='rounded w-32 h-32 lg:w-64 lg:h-64 mr-8' 
-                         alt={author.name}
-                    />
-                    <div className="text-lg flex flex-col justify-center">
-                        <h1 className='cursive text-6xl text-red-600 mb-4'>
-                            Hey there. I'm {" "}
-                            <span className='text-cursive'>{author.name}</span>
-                        </h1>
-                        <div className='prose lg:prose-xl text-red-600 cursive'>
-                            <BlockContent blocks={author.bio} projectId='8rgqlktn' dataset='production'/>
+            <div className='container overflow-auto'>
+                <div className='p-1 relative'>
+                    <section className='bg-white-200 rounded-lg shadow-2xl lg:flex p-2'>
+                        {/* <img src={urlFor(author.authorImage).url()} 
+                            className='rounded w-16 h-16 lg:w-32 lg:h-32' 
+                            alt={author.name}
+                        /> */}
+                        <div className="text-lg flex flex-col justify-center">
+                            <h1 className='cursive text-3xl text-red-600 mb-2'>
+                                Hey there. I'm {" "}
+                                <span className='text-cursive'>{author.name}</span>
+                            </h1>
+                            <div className='prose lg:prose-xl text-red-600 cursive'>
+                                <BlockContent blocks={author.bio} projectId='8rgqlktn' dataset='production'/>
+                            </div>
                         </div>
-                    </div>
-                </section>
-            </div>
-            <div className='p-5 container mx-auto'> 
-                <Carousel className='' slides={slides} autoplay={true} interval={5000}/>
+                    </section>
+                </div>
+                <div className='p-1'> 
+                    <Carousel className='' slides={slides} autoplay={true} interval={5000}/>
+                </div>
             </div>
         </div> 
     </div>
