@@ -55,29 +55,18 @@ export default function About() {
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
          <div className='full-screen-video-content'>
-            <div className='container overflow-auto'>
-                <div className='p-1 relative'>
-                    <section className='bg-white-200 rounded-lg shadow-2xl lg:flex p-2'>
-                        {/* <img src={urlFor(author.authorImage).url()} 
-                            className='rounded w-16 h-16 lg:w-32 lg:h-32' 
-                            alt={author.name}
-                        /> */}
-                        <div className="text-lg flex flex-col justify-center">
-                            <h1 className='cursive text-3xl text-red-600 mb-2'>
-                                Hey there. I'm {" "}
-                                <span className='text-cursive'>{author.name}</span>
-                            </h1>
-                            <div className='prose lg:prose-xl text-red-600 cursive'>
-                                <BlockContent blocks={author.bio} projectId='8rgqlktn' dataset='production'/>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div className='p-1'> 
+                <section className='bg-white rounded-lg lg:flex flex-col p-4 m-4'>
+                    <h1 className='cursive text-3xl text-red-600 mb-2'>
+                        Hey there. I'm {author.name}!
+                    </h1>
+                    <div className='prose lg:prose-xl text-red-600 cursive'>
+                        <BlockContent blocks={author.bio} projectId='8rgqlktn' dataset='production'/>
+                    </div>
+                </section>
+                <div className='p-2 m-2'> 
                     <Carousel className='' slides={slides} autoplay={true} interval={5000}/>
                 </div>
-            </div>
-        </div> 
-    </div>
+        </div>
+    </div> 
     );
 }
