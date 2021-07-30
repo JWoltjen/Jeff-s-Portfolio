@@ -36,12 +36,10 @@ export default function NavBar() {
                     >
                         About Me
                     </NavLink>
-                </nav>
-                <div className="inline-flex py-3 px-3 my-6">
+                     <div className="inline-flex py-3 my-6">
                     <SocialIcon url='https://www.linkedin.com/in/jeff-woltjen-6326b924/' className='mr-4' target='_blank' fgColor='#fff' style={{height: 35, width: 35}}/>
-                    <SocialIcon url='https://www.youtube.com/' className='mr-4' target='_blank' fgColor='#fff' style={{height: 35, width: 35}}/>
-                    <SocialIcon url='https://twitter.com/' className='mr-4' target='_blank' fgColor='#fff' style={{height: 35, width: 35}}/>
                 </div>
+                </nav>
             </div>
         </header>
     )
