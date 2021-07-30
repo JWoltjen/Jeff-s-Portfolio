@@ -55,7 +55,7 @@ export default function About() {
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
          <div className='full-screen-video-content'>
-            <div className='container overflow-auto'>
+            <div className='container overflow-hidden'>
                 <div className='p-1 relative'>
                     <section className='bg-white-200 rounded-lg shadow-2xl lg:flex p-2'>
                         {/* <img src={urlFor(author.authorImage).url()} 

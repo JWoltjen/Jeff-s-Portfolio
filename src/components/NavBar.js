@@ -5,13 +5,13 @@ import {SocialIcon} from 'react-social-icons'
 export default function NavBar() {
     return (
         <header className="bg-red-600">
-            <div className="container mx-auto flex justify-between">
-                <nav className="flex">
+            <div className="container mx-auto flex justify-around">
+                <nav className="flex ">
                     <NavLink 
                         to="/" 
                         exact 
                         activeClassName="text-white"
-                        className="inline-flex items-center py-6 px-3 mr-4 text-red-100 font-bold cursive tracking-widest sm: text-xs md: text-base lg: text-6xl">
+                        className="inline-flex items-center py-6 px-3 mr-4 text-red-100 font-bold cursive tracking-widest sm: text-xs md: text-base lg: text-4xl">
                         Jeff
                     </NavLink>
                     <NavLink 
@@ -37,8 +37,8 @@ export default function NavBar() {
                         About Me
                     </NavLink>
                      <div className="inline-flex py-3 my-6">
-                    <SocialIcon url='https://www.linkedin.com/in/jeff-woltjen-6326b924/' className='mr-4' target='_blank' fgColor='#fff' style={{height: 35, width: 35}}/>
-                </div>
+                        <SocialIcon url='https://www.linkedin.com/in/jeff-woltjen-6326b924/' className='mr-4' target='_blank' fgColor='#fff' style={{height: 35, width: 35}}/>
+                    </div>
                 </nav>
             </div>
         </header>
