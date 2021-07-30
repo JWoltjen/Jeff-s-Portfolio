@@ -55,20 +55,18 @@ export default function About() {
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
          <div className='full-screen-video-content'>
-            <div className='container overflow-hidden'>
-                    <section className='bg-white-200 rounded-lg shadow-2xl lg:flex p-2'>
-                            <h1 className='cursive text-3xl text-red-600 mb-2'>
-                                Hey there. I'm {author.name}
-                            </h1>
-                            <div className='prose lg:prose-xl text-red-600 cursive'>
-                                <BlockContent blocks={author.bio} projectId='8rgqlktn' dataset='production'/>
-                            </div>
-                    </section>
+                <section className='bg-white-200 rounded-lg shadow-2xl lg:flex p-2'>
+                        <h1 className='cursive text-3xl text-red-600 mb-2'>
+                            Hey there. I'm {author.name}
+                        </h1>
+                        <div className='prose lg:prose-xl text-red-600 cursive'>
+                            <BlockContent blocks={author.bio} projectId='8rgqlktn' dataset='production'/>
+                        </div>
+                </section>
                 <div className='p-1'> 
                     <Carousel className='' slides={slides} autoplay={true} interval={5000}/>
                 </div>
             </div>
         </div> 
-    </div>
     );
 }
