@@ -33,7 +33,7 @@ export default function Post() {
                 className='video'>
                 <source src={BackgroundVideo} type="video/mp4"/>
             </video>
-            <div className='full-screen-video-content'>
+            <div className='h-full'>
                     <section className='content-center text-center px-10'>
                         <h1 className='sm: text-xl md: text-2xl lg: text-4xl text-white cursive py-10  z-10'>A journey in front-end engineering</h1>
                         <div className='container max-h-80 overflow-auto'>

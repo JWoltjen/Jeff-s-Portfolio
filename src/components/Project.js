@@ -25,8 +25,8 @@ export default function Project() {
             className='video'>
             <source src={BackgroundVideo} type="video/mp4"/>
         </video>
-         <div className='full-screen-video-content py-8'>
-             <div className='container max-h-96 overflow-auto'>
+         <div className='py-8 h-full overflow-auto'>
+             <div className='container h-full'>
                 <section className='content-center px-2 grid grid-cols-2 gap-8 grid-gap-3'>
                     {projectData && projectData.map((project, index) =>(
                     <article className='relative rounded-md bg-white p-4 opacity-80'>
@@ -51,7 +51,7 @@ export default function Project() {
                                 {project.place}
                             </span>
                             <div className='container mx-auto max-w-lg sm: h-5 md: h-10 lg: h-20 overflow-scroll'>
-                                <p className='my-6 text-sm text-gray-700 leading-snug'>
+                                <p className='py-2 mx-2 text-sm text-gray-700 leading-snug'>
                                     {project.description}
                                 </p>
                             </div>
