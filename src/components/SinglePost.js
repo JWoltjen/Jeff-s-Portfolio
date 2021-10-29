@@ -44,11 +44,11 @@ export default function SinglePost() {
                 className='full-screen-video-container video'>
                 <source src={BackgroundVideo} type="video/mp4"/>
             </video>
-            <article className='container mx-auto my-8 bg-white rounded-lg'>
-                        <div className='rounded p-12 flex items-center opacity-80'>
-                            <h1 className='font-extrabold cursive sm: text-xl md: text-2xl lg:text-4xl mb-0'>{singlePost.title}</h1>
+            <article className='container mx-auto my-2 bg-white rounded-lg'>
+                        <div className='rounded p-6 mb-2 flex items-center opacity-80'>
+                            <h1 className='font-extrabold cursive sm: text-xl md: text-2xl lg:text-4xl'>{singlePost.title}</h1>
                         </div>
-                        <div className='h-96 w-full overflow-auto font-bold px-4 pb-4 mx-auto prose sm: prose md: prose lg:prose-xl'>
+                        <div className='w-full overflow-auto font-bold px-4 pb-2 mx-auto prose'>
                             <BlockContent 
                                 blocks={singlePost.body} 
                                 projectId='8rgqlktn' 
